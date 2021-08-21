@@ -1,0 +1,241 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.FooterWrapper {
+    background-color: #2C2C37;
+    position: relative;
+    width: 90%;
+    padding: 5% 5% 5px 5%; 
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+.FooterLeft {
+    height: 40%;
+    width: 30%;
+    position: relative;
+    float: left;
+}
+
+.FooterCenter {
+    height: 40%;
+    width: 30%;
+    position: relative;
+    float: left;
+}
+.FooterCenter > span,.FooterRight > span {
+    display: block;
+    /* font-size: 18px;
+    line-height: 28.8px;
+    font-weight: 700; */
+}
+.FooterRight {
+    height: 40%;
+    width: 40%;
+    position: relative;
+    float: left;
+}
+.clear {
+    clear:left;
+}
+.FooterBottom {
+    width: 100%;
+    /* font-size: 16px; */
+}
+.Social,.Partners {
+    padding:5% 5%;
+}
+.Social > a,.Partners > a {
+    margin-right: 5%;
+}
+.copyright {
+    width: 60%;
+    float:left;
+    /* font-weight: 600;
+    line-height: 24px; */
+}
+.info {
+    width: 40%;
+    float: left;
+}
+.info > span { 
+    margin-right: 10px;
+}
+.confidential {
+    /* line-height: 19.5px;
+    font-weight: 700; */
+    text-decoration: underline;
+}
+/* .author {
+    line-height: 25.6px;
+    font-weight: 700;
+} */
+
+@media screen and (min-width: 1215px)  {
+    .confidential {
+        line-height: 19.5px;
+        font-weight: 700;
+    }
+    .copyright {
+        font-weight: 600;
+        line-height: 24px;
+    }
+    .author {
+        line-height: 25.6px;
+        font-weight: 700;
+    }
+    .FooterCenter > span,.FooterRight > span {
+        font-size: 18px;
+        line-height: 28.8px;
+        font-weight: 700;
+    }
+}
+@media screen and (min-width: 880px) and (max-width: 1215px) {
+    .Image {
+        width: 80px;
+        height: auto;
+
+    }
+    .confidential {
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 20.8px;
+    }
+    .author {
+        font-size: 14px;
+        line-height: 20.6px;
+        font-weight: 500;
+
+    }
+    .FooterCenter > span,.FooterRight > span {
+        font-size: 14px;
+        line-height: 20.8px;
+        font-weight: 600;
+    }
+}
+@media screen and (min-width: 735px) and (max-width: 879px) {
+    .FooterLeft {
+        width: 40%;
+    }
+    .FooterCenter {
+        width: 30%;
+    }
+    .FooterRight {
+        width: 30%;
+    }
+    .Image {
+        width: 55px;
+        height: auto;
+
+    }
+    .confidential {
+        font-size: 12px;
+        line-height: 16.8px;
+        font-weight: 400;
+    }
+    .author {
+        font-size: 12px;
+        line-height: 16.8px;
+        font-weight: 400;
+    }
+    .copyright {
+        font-size: 12px;
+        line-height: 16.8px;
+        font-weight: 400;
+    }
+    .FooterCenter > span,.FooterRight > span {
+        font-size: 12px;
+        line-height: 16.8px;
+        font-weight: 400;
+    }
+}
+@media screen and (min-width: 518px) and (max-width: 734px) {
+    
+    .logoClass {
+        width: 150px;
+        height: auto;
+    }
+    .FooterLeft {
+        width: 40%;
+        height: 60%;
+    }
+    .FooterCenter {
+        width: 30%;
+        height: 60%;
+    }
+    .FooterRight {
+        width: 30%;
+        height: 60%;
+    }
+    .Image {
+        width: 55px;
+        height: auto;
+
+    }
+    .confidential {
+        font-size: 12px;
+        line-height: 16.8px;
+        font-weight: 400;
+    }
+    .author {
+        font-size: 12px;
+        line-height: 16.8px;
+        font-weight: 400;
+    }
+    .copyright {
+        font-size: 12px;
+        line-height: 16.8px;
+        font-weight: 400;
+    }
+    .FooterCenter > span,.FooterRight > span {
+        font-size: 12px;
+        line-height: 16.8px;
+        font-weight: 400;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 517px) {
+    
+    .logoClass {
+        width: 120px;
+        height: auto;
+    }
+    .FooterLeft {
+        width: 40%;
+        height: 60%;
+    }
+    .FooterCenter {
+        width: 30%;
+        height: 60%;
+    }
+    .FooterRight {
+        width: 30%;
+        height: 60%;
+    }
+    .Image {
+        width: 40px;
+        height: auto;
+
+    }
+    .confidential {
+        font-size: 10px;
+        line-height: 16.8px;
+        font-weight: 400;
+    }
+    .author {
+        font-size: 10px;
+        line-height: 16.8px;
+        font-weight: 400;
+    }
+    .copyright {
+        font-size: 10px;
+        line-height: 16.8px;
+        font-weight: 400;
+        width: 40%;
+    }
+    .FooterCenter > span,.FooterRight > span {
+        font-size: 10px;
+        line-height: 16.8px;
+        font-weight: 400;
+    }
+}
+

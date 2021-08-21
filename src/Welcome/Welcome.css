@@ -1,0 +1,593 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+body::-webkit-scrollbar {
+    display: none;
+}
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.WrapperWelcome {
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+}
+.WrapperWelcomeTop {
+    width: 100vw;
+    padding:0;
+    overflow: hidden;
+}
+.WrapperWelcomeBottom {
+    width: 100vw;
+    overflow: hidden;
+}
+.MobileBuy {
+    display:none;
+    background-color: #F73781;
+    cursor: pointer;
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+    width: 100%;
+    height: 80px;
+    padding-top: 40px;
+    text-align: center;
+}
+.WrapperWelcomeTopLeft,.WrapperWelcomeTopRight {
+    overflow: hidden;
+}
+.WrapperWelcomeTopLeft,.WrapperWelcomeBottomLeft {
+    float: left;
+}
+.WrapperWelcomeTopRight,.WrapperWelcomeBottomRight {
+    float: left;
+}
+.WrapperWelcomeBottomLeft {
+    background-color: #2222FB;
+}
+.WrapperWelcomeBottomLeft > div  {
+    font-style: normal;
+    font-weight: bold;
+    line-height: 160%;
+    color: #fff;
+}
+.WrapperWelcomeBottomRight {
+    background-color: #F73781;
+    cursor: pointer;
+}
+
+.textWelcome {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    line-height: 160%;
+    letter-spacing: .195em;
+    text-transform: uppercase;
+    font-style: normal;
+}
+.TrailerBox {
+    position: absolute;
+    color: #000035;
+    background-color: #F9E12D;
+    text-align: left;
+    cursor: pointer;
+}
+.TrailerBoxOpened {
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 2;
+}
+.TrailerModal {
+    position: absolute;
+    z-index: 3;
+    display: none;
+    background-color: #F9E12D;
+    height: 100vh;
+    overflow: hidden !important; 
+    cursor: pointer;
+}
+
+.TrailerModalOpened {
+    display: block;
+}
+.Basket {
+    position: relative;
+    display: block; 
+    width: 48px;
+    margin-top: 124px;
+    margin-left: 58px;
+}
+#Cancel {
+    width: 72px;
+    height: 72px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.BasketSecondary {
+    color: #F73781;
+    cursor: pointer;
+    display: none;
+}
+.Buy {
+    display: block;
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+    margin-top: 30px;
+    margin-left: 55px;
+}
+.logomain {
+    position: absolute;
+    left: 40px;
+    top:70px;
+}
+.SocialMain {
+    position: absolute;
+    top:70px;
+    right: 0;
+}
+.socialLinks {
+    margin-right: 28px;
+}
+
+.FilmContainer {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 160%;
+    text-transform: uppercase;
+}
+.FilmCounter {
+    text-align: right;
+}
+.FilmCounterCurrent {
+    font-weight: 900 !important;
+    font-size: 35px;
+    color: #f73781 !important;
+}
+.FilmCounterTotal,.delim {
+    font-weight: 700 !important;
+    font-size: 25px;
+}
+.delim {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.FilmContent  {
+    float:left;
+    width: 20%;
+    position: relative;
+    /* border: #F73781 solid 1px; */
+}
+.fcName {
+    display: inline-block;
+    width: 100%;
+}
+.FilmContentSecondary {
+    margin-top: 20px;
+    /* border: solid thistle 1px; */
+}
+.fcPic {
+    margin-right: 14px;
+    /* border: springgreen 1px solid; */
+}
+.fcValue {
+    font-size: 18px;
+    font-weight: bold;
+    /* border: #F73781 1px solid; */
+    vertical-align: top;
+    text-transform: none;
+
+}
+.arrows {
+    text-align: right;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.SocialMobile {
+    position: absolute;
+    display: none;
+    top:145px;
+    left:50px;
+}
+.ArrowPrimary {
+    display: inline;
+}
+.ArrowSecondary {
+    display: none;
+}
+.youtube {
+    display: block;
+    position: relative;
+    width: 100vw;
+    height: 80vh;
+}
+.fiSecondary {
+    height: 100%;
+}
+.Cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #29295f;
+    opacity: .5;
+}
+
+@media (min-width:1920px) {
+    .WrapperWelcomeBottomRight {
+        height: 100%;
+        width: 480px;
+    }
+    .WrapperWelcomeBottomLeft {
+        width: 1170px;
+        height: 100%;
+        padding-left: 215px;
+        padding-right: 55px;
+        padding-top: 45px;
+    }
+    .WrapperWelcomeTopLeft,.WrapperWelcomeBottomLeft {
+        max-width: 1440px;
+    }
+    .WrapperWelcomeBottom {
+        max-width: 1920px;
+    }
+    .WrapperWelcomeBottomRight {
+        max-width: 480px;
+    }
+    .FilmTitle {
+        font-size: 30px;
+    }
+    .WrapperWelcomeTop {
+        height: 793px;
+    }
+    .WrapperWelcomeBottom {
+        max-height: 287px;
+        height: 287px;
+    }
+    .fiPrimary {
+        max-width: 1440px;
+        min-width: 1440px;
+        max-height: 793px;
+    }
+    .fiSecondary {
+        min-width: 480px !important; 
+        max-width: 480px;
+    }
+    .TrailerBox {
+        font-size: 13px;
+        width: 265px;
+        height: 65px;
+        top: 693px;
+        padding-left: 215px;
+        padding-top: 35px;
+    }
+}
+@media (min-width: 1415px) and (max-width: 1919px)  {
+    .WrapperWelcomeBottomRight,.WrapperWelcomeTopRight {
+        height: 100%;
+        width: 25%;
+    }
+    .WrapperWelcomeTopLeft {
+        width: 75%;
+        height: 100%;
+    }
+    .WrapperWelcomeBottomLeft {
+        width: 60%;
+        height: 100%;
+        padding-left: 10%;
+        padding-right: 5%;
+        padding-top: 45px; 
+    }
+
+    .WrapperWelcomeBottomRight {
+        width: 25%; 
+        height: 100%;
+    }
+    .FilmTitle {
+        font-size: 30px;
+    }
+    .WrapperWelcomeTop {
+        height: 793px;
+    }
+    .WrapperWelcomeBottom {
+        max-height: 287px;
+        height: 287px;
+    }
+
+    .TrailerBox {
+        font-size: 13px;
+        width: 265px;
+        height: 65px;
+        top: 693px;
+        padding-left: 10%;
+        padding-top: 35px;
+    }
+    .fiPrimary {
+        height: 100%;
+        width: 100%;
+    }
+   
+}
+@media (min-width: 1024px) and (max-width: 1414px)  {
+    .WrapperWelcomeTopRight {
+        display: none;
+    }
+    .WrapperWelcomeBottomRight {
+        height: 100%;
+        width: 25%;
+    }
+    .WrapperWelcomeTopLeft {
+        width: 100%;
+        height: 793px;
+    }
+    .WrapperWelcomeBottomLeft {
+        width: 66%;
+        height: 100%;
+        padding-left: 4%;
+        padding-right: 5%;
+        padding-top: 45px; 
+    }
+    .WrapperWelcomeBottom {
+        max-height: 287px;
+        height: 287px;
+    }
+    .TrailerBox {
+        font-size: 13px;
+        width: 235px;
+        height: 65px;
+        top: 693px;
+        padding-left: 4%;
+        padding-top: 35px;
+    }
+    .fiPrimary {
+        height: 100%;
+        width: 100%;
+    }
+    .Basket {
+        margin-left: 30px;
+    }
+    .Buy {
+        margin-left: 30px;
+    }
+    .FilmTitle {
+        font-size: 30px;
+    }
+    .SocialMobile {
+        display: block;
+    }
+}
+
+@media (min-width: 750px) and (max-width: 1023px)  {
+    .WrapperWelcomeTopRight {
+        display: none;
+    }
+    .WrapperWelcomeBottomRight {
+        display: none;
+    }
+    .WrapperWelcomeTopLeft {
+        width: 100%;
+        height: 793px;
+    }
+    .WrapperWelcomeBottomLeft {
+        width: 92%;
+        height: 100%;
+        padding-left: 4%;
+        padding-right: 4%;
+        padding-top: 45px; 
+    }
+    .WrapperWelcomeBottom {
+        max-height: 287px;
+        height: 287px;
+    }
+    .TrailerBox {
+        font-size: 13px;
+        width: 235px;
+        height: 65px;
+        top: 693px;
+        padding-left: 4%;
+        padding-top: 35px;
+    }
+    .Basket {
+        margin-left: 30px;
+    }
+    .Buy {
+        margin-left: 30px;
+    }
+    .FilmTitle {
+        font-size: 30px;
+    }
+    .SocialMobile {
+        display: block;
+    }
+    .ArrowPrimary {
+        display: none;
+    }
+    .ArrowSecondary {
+        display: inline;
+    }
+    .BasketSecondary {
+        display: block;
+        float:right
+    }
+    .fiPrimary {
+        width: auto;
+        height: 100%;
+    }
+}
+@media (min-width: 481px) and (max-width: 749px)  {
+    .WrapperWelcomeTopRight {
+        display: none;
+    }
+    .WrapperWelcomeBottomRight {
+        display: none;
+    }
+    .WrapperWelcomeTopLeft {
+        width: 100%;
+        height: 775px;
+    }
+    .WrapperWelcomeBottomLeft {
+        width: 92%;
+        height: 271px;
+        /* height: 100%; */
+        padding-left: 4%;
+        padding-right: 4%;
+        padding-top: 45px; 
+    }
+    .WrapperWelcomeBottom {
+        max-height: 287px;
+        height: 287px;
+    }
+    .TrailerBox {
+        font-size: 13px;
+        width: 235px;
+        height: 65px;
+        top: 693px;
+        padding-left: 4%;
+        padding-top: 35px;
+    }
+    .Basket {
+        margin-left: 30px;
+    }
+    .Buy {
+        margin-left: 30px;
+    }
+    .FilmTitle {
+        font-size: 25px;
+    }
+    .SocialMobile {
+        display: block;
+    }
+    .ArrowPrimary {
+        display: none;
+    }
+    .ArrowSecondary {
+        display: inline;
+    }
+
+    .fiPrimary {
+        /* width: 100%; */
+        height: 100%;
+    }
+    .FilmCounter {
+        display: none !important;
+    }
+    .FilmContainer {
+        padding-top: 20px;
+    }
+    .FilmContent {
+        width: 25%;
+        margin-right: 10px;
+    }
+    .ratingContent {
+        width:15%;
+    }
+    .TrailerBox {
+        font-size: 13px;
+        width: 235px;
+        height: 65px;
+        top: 675px;
+        padding-left: 4%;
+        padding-top: 35px;
+    }
+    .MobileBuy {
+        display:block;
+    }
+    .WrapperWelcomeBottom {
+        height: 271px;
+    }   
+}
+@media (min-width: 320px) and (max-width: 480px)  {
+    .WrapperWelcomeTopRight {
+        display: none;
+    }
+    .WrapperWelcomeBottomRight {
+        display: none;
+    }
+    .WrapperWelcomeTopLeft {
+        width: 100%;
+        height: 793px;
+    }
+    .WrapperWelcomeBottomLeft {
+        width: 92%;
+  
+        padding-left: 4%;
+        padding-right: 4%;
+        padding-top: 10px; 
+    }
+    .WrapperWelcomeBottom {
+        height: 100%;
+        /* max-height: 287px; */
+        /* height: 287px; */
+    }
+    .TrailerBox {
+        font-size: 13px;
+        width: 235px;
+        height: 65px;
+        top: 693px;
+        padding-left: 4%;
+        padding-top: 35px;
+    }
+    .Basket {
+        margin-left: 30px;
+    }
+    .Buy {
+        margin-left: 30px;
+    }
+    .FilmTitle {
+        font-size: 16px;
+    }
+    .SocialMobile {
+        display: block;
+    }
+    .ArrowPrimary {
+        display: none;
+    }
+    .ArrowSecondary {
+        display: inline;
+    }
+
+    .fiPrimary {
+        width: 100%;
+        height: 100%;
+    }
+    .FilmCounter {
+        display: none !important;
+    }
+    .FilmContainer {
+        padding-top: 10px;
+        font-size: 7.5px;
+    }
+    .FilmContent {
+        width: 23%;
+        margin-right: 10px;
+    }
+    .ratingContent {
+        width:15%;
+    }
+    .TrailerBox {
+        display: none;
+    }
+    .MobileBuy {
+        display:block;
+        position: relative;
+        bottom: 0;
+        height: 70px;
+        padding-top: 30px;
+    }
+
+    .fcValue {
+        font-size: 10px;
+    }
+    .fcPic {
+        width: 10px;
+        margin-right: 6px;
+    }
+    
+    
+}
