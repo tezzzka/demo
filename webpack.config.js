@@ -16,7 +16,9 @@ module.exports = {
         path: path.resolve(__dirname, 'build'),
         filename: 'bundle.js',
         publicPath: '',
+        // sourceMapFilename: "[name].js.map"
     },
+    // devtool: "source-map",
     module: {
         rules: [
             {
@@ -34,12 +36,28 @@ module.exports = {
                             },
                         ],
                     ],
-                }
+                },
+
             },
             {
-                test: /\.(css||s[ac]ss)$/i,
-                // include: path.resolve(__dirname, 'src'),
-                use: ["style-loader", "css-loader", "sass-loader"],
+                test: /\.(s[ac]ss)$/i,
+                use: [
+                    "style-loader",
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                        }
+                    },
+                ]
+            },
+            {
+                test: /\.(css)$/i,
+                use: [
+                    "style-loader",
+                    "css-loader"
+
+                ]
             },
             {
                 test: /\.(png|jpg|jpeg|svg)$/,

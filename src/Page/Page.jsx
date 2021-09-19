@@ -11,8 +11,9 @@ import ImageYoutube from '../../public/assets/youtube.png';
 import ImageVK from '../../public/assets/vk.png';
 import { Footer } from '../footer';
 import { Welcome } from '../Welcome';
-import { Today } from '../Today';
-
+import { Sessions } from '../Sessions';
+import { Soon } from '../Soon'
+import { Symbolica } from '../Symbolica';
 import { InitFilmsAction } from '../storage/actions';
 import { data } from '../../public/data';
 
@@ -23,10 +24,11 @@ const _Page = (props) => {
     return (
         <>
             <Welcome />
-            <Today />
-            {/* <div className="w2"></div>
-            <div className="w3"></div> */}
+            <Sessions />
+            <Soon />
+            <Symbolica />
             <Footer />
+            {/* <div style={{ width: '100%', backgroundColor: 'yellow', height: '20px' }}></div> */}
         </>
     )
 }

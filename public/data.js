@@ -11,7 +11,26 @@ export const data =
             "during": "1 час 10 минут",
             "address": "Республики, 100б",
             "price": "750",
-            "nowDates": "18-29 февраля"
+            "nowDates": "16-22 сентября",
+            "StartDate": "2021-09-16T00:00:00",
+            "ExpireDate": "2021-09-22T23:59:00",
+            "sessions": [
+                {
+                    "DateTime": "2021-09-16T09:00:00",
+                    "PlaceHolder": "Place1",
+                    "SeatsId": "0"
+                },
+                {
+                    "DateTime": "2021-09-17T12:00:00",
+                    "PlaceHolder": "Place1",
+                    "SeatsId": "1"
+                },
+                {
+                    "DateTime": "2021-09-18T12:00:00",
+                    "PlaceHolder": "Place2",
+                    "SeatsId": "2"
+                }
+            ]
         },
         {
             "index": 1,
@@ -24,7 +43,28 @@ export const data =
             "during": "1 час 30 минут",
             "address": "Ленина, 60",
             "price": "450",
-            "nowDates": "01-29 февраля"
+            "nowDates": "16-22 сентября",
+
+            "StartDate": "2021-09-16T00:00:00",
+            "ExpireDate": "2021-09-22T23:59:00",
+            "sessions": [
+                {
+                    "DateTime": "2021-09-16T10:30:00",
+                    "PlaceHolder": "Place1",
+                    "SeatsId": "4"
+                },
+                {
+                    "DateTime": "2021-09-17T14:00:00",
+                    "PlaceHolder": "Place1",
+                    "SeatsId": "5"
+                },
+                {
+                    "DateTime": "2021-09-18T10:00:00",
+                    "PlaceHolder": "Place2",
+                    "SeatsId": "6"
+                }
+            ]
+
         },
         {
             "index": 2,
@@ -37,7 +77,28 @@ export const data =
             "during": "3 часа 10 минут",
             "address": "Хутор Зорька",
             "price": "1000",
-            "nowDates": "13-26 февраля",
+            "nowDates": "08-15 сентября",
+
+            "StartDate": "2021-09-08T00:00:00",
+            "ExpireDate": "2021-09-15T23:59:00",
+            "sessions": [
+                {
+                    "DateTime": "2021-09-14T15:30:00",
+                    "PlaceHolder": "Place1",
+                    "SeatsId": "7"
+                },
+                {
+                    "DateTime": "2021-09-07T17:00:00",
+                    "PlaceHolder": "Place1",
+                    "SeatsId": "8"
+                },
+                {
+                    "DateTime": "2021-09-14T20:00:00",
+                    "PlaceHolder": "Place1",
+                    "SeatsId": "9"
+                }
+            ]
+
         },
         {
             "index": 3,
@@ -50,7 +111,220 @@ export const data =
             "during": "1 час 20 минут",
             "address": "Тундра, тундра",
             "price": "300",
-            "nowDates": "13-26 февраля",
+            "nowDates": "16-29 сентября",
+
+            "StartDate": "2021-09-16T00:00:00",
+            "ExpireDate": "2021-09-29T23:59:00",
+            "sessions": [
+                {
+                    "DateTime": "2021-09-16T13:30:00",
+                    "PlaceHolder": "Place2",
+                    "SeatsId": "10"
+                },
+                {
+                    "DateTime": "2021-09-16T16:00:00",
+                    "PlaceHolder": "Place2",
+                    "SeatsId": "11"
+                },
+                {
+                    "DateTime": "2021-09-16T19:00:00",
+                    "PlaceHolder": "Place2",
+                    "SeatsId": "12"
+                }
+            ]
+
+        },
+        {
+            "index": 4,
+            "FilmName": "Инфиниты",
+            "AltFilmName": "Infinite",
+            "TrailerLink": "cnn8xghmxZA",
+            "ImageLarge": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu4PUk7CUuBhm9sqoFYpqLzuSvg-ydJTBzad6yIZqAJfjbMnQZMOzUr4D8W7AgC5ouzH0&usqp=CAU",
+            "ImageSmall": "https://upload.wikimedia.org/wikipedia/ru/4/4f/%D0%91%D0%B5%D1%81%D0%BA%D0%BE%D0%BD%D0%B5%D1%87%D0%BD%D0%BE%D1%81%D1%82%D1%8C_%28%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%2C_2021%29.jpeg",
+            "rating": "9.5",
+            "during": "1 час 20 минут",
+            "address": "ул. Чубынина, 17",
+            "price": "300",
+            "nowDates": "16-22 сентября",
+
+            "StartDate": "2021-09-16T00:00:00",
+            "ExpireDate": "2021-09-22T23:59:00",
+            "sessions": [
+                {
+                    "DateTime": "2021-09-16T19:00:00",
+                    "PlaceHolder": "Place1",
+                    "SeatsId": "13"
+                },
+            ]
+
+        },
+        {
+            "index": 5,
+            "FilmName": "Босс-молокосос 2",
+            "AltFilmName": "",
+            "TrailerLink": "qoEUEWCtKZ4",
+            "ImageLarge": "https://media.kg-portal.ru/images/bossbaby/bossbaby_10.jpg",
+            "ImageSmall": "https://i.pinimg.com/736x/2c/5b/10/2c5b10fc473f06f05813883824e24511.jpg",
+            "rating": "10",
+            "during": "1 час 50 минут",
+            "address": "ул. Чубынина, 17",
+            "price": "200",
+            "nowDates": "16-22 сентября",
+
+            "StartDate": "2021-09-16T00:00:00",
+            "ExpireDate": "2021-09-22T23:59:00",
+            "sessions": [
+                {
+                    "DateTime": "2021-09-16T19:00:00",
+                    "PlaceHolder": "Place1",
+                    "SeatsId": "13"
+                },
+            ]
+
+        },
+        {
+            "index": 6,
+            "FilmName": "Вечные (2021)",
+            "AltFilmName": "",
+            "TrailerLink": "qoEUEWCtKZ4",
+            "ImageLarge": "https://www.ivi.ru/titr/uploads/2019/07/31/8de61d8abf52fc55c48dea1e9bcbcb05.jpg/1400x0",
+            "ImageSmall": "https://upload.wikimedia.org/wikipedia/ru/0/04/%D0%92%D0%B5%D1%87%D0%BD%D1%8B%D0%B5_%D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%BF%D0%BE%D1%81%D1%82%D0%B5%D1%80.jpg",
+            "rating": "10",
+            "during": "1 час 50 минут",
+            "address": "ул. Чубынина, 17",
+            "price": "200",
+            "nowDates": "04 ноября",
+
+            "StartDate": "2021-11-04T00:00:00",
+            "ExpireDate": "2021-09-10T23:59:00",
+            "sessions": [
+                {
+                    "DateTime": "2021-11-04T19:00:00",
+                    "PlaceHolder": "Place1",
+                    "SeatsId": "13"
+                },
+            ]
+
+        },
+        {
+            "index": 7,
+            "FilmName": "Лётчик",
+            "AltFilmName": "",
+            "TrailerLink": "qoEUEWCtKZ4",
+            "ImageLarge": "https://www.ivi.ru/titr/uploads/2019/07/31/8de61d8abf52fc55c48dea1e9bcbcb05.jpg/1400x0",
+            "ImageSmall": "https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/c0675a65-8adf-405f-a801-a18ad74b1edf/600x900",
+            "rating": "10",
+            "during": "1 час 50 минут",
+            "address": "ул. Чубынина, 17",
+            "price": "200",
+            "nowDates": "04 ноября",
+
+            "StartDate": "2021-11-04T00:00:00",
+            "ExpireDate": "2021-09-10T23:59:00",
+            "sessions": [
+                {
+                    "DateTime": "2021-11-04T21:00:00",
+                    "PlaceHolder": "Place1",
+                    "SeatsId": "13"
+                },
+            ]
+
+        },
+        {
+            "index": 8,
+            "FilmName": "Вкус жизни (2021)",
+            "AltFilmName": "",
+            "TrailerLink": "qoEUEWCtKZ4",
+            "ImageLarge": "https://www.ivi.ru/titr/uploads/2019/07/31/8de61d8abf52fc55c48dea1e9bcbcb05.jpg/1400x0",
+            "ImageSmall": "https://www.film.ru/sites/default/files/movies/posters/49626462-1399608.jpg",
+            "rating": "10",
+            "during": "1 час 50 минут",
+            "address": "ул. Чубынина, 17",
+            "price": "200",
+            "nowDates": "04 ноября",
+
+            "StartDate": "2021-11-04T00:00:00",
+            "ExpireDate": "2021-09-10T23:59:00",
+            "sessions": [
+                {
+                    "DateTime": "2021-11-05T21:00:00",
+                    "PlaceHolder": "Place1",
+                    "SeatsId": "13"
+                },
+            ]
+
+        },
+        {
+            "index": 9,
+            "FilmName": "Всё прошло хорошо",
+            "AltFilmName": "",
+            "TrailerLink": "qoEUEWCtKZ4",
+            "ImageLarge": "https://www.ivi.ru/titr/uploads/2019/07/31/8de61d8abf52fc55c48dea1e9bcbcb05.jpg/1400x0",
+            "ImageSmall": "https://www.film.ru/sites/default/files/styles/epsa_600x680/public/articles/49751123-1562849.jpg",
+            "rating": "10",
+            "during": "1 час 50 минут",
+            "address": "ул. Чубынина, 17",
+            "price": "200",
+            "nowDates": "04 ноября",
+
+            "StartDate": "2021-11-04T00:00:00",
+            "ExpireDate": "2021-09-10T23:59:00",
+            "sessions": [
+                {
+                    "DateTime": "2021-11-05T21:00:00",
+                    "PlaceHolder": "Place1",
+                    "SeatsId": "13"
+                },
+            ]
+
+        },
+        {
+            "index": 10,
+            "FilmName": "Король Ричард (2021)",
+            "AltFilmName": "",
+            "TrailerLink": "qoEUEWCtKZ4",
+            "ImageLarge": "https://www.ivi.ru/titr/uploads/2019/07/31/8de61d8abf52fc55c48dea1e9bcbcb05.jpg/1400x0",
+            "ImageSmall": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnyHhJ6BHNi5LLvEgEg9InRsIxx3YEcaXOwg&usqp=CAU",
+            "rating": "10",
+            "during": "1 час 50 минут",
+            "address": "ул. Чубынина, 17",
+            "price": "200",
+            "nowDates": "04 ноября",
+
+            "StartDate": "2021-11-04T00:00:00",
+            "ExpireDate": "2021-09-10T23:59:00",
+            "sessions": [
+                {
+                    "DateTime": "2021-11-05T21:00:00",
+                    "PlaceHolder": "Place1",
+                    "SeatsId": "13"
+                },
+            ]
+
+        },
+        {
+            "index": 11,
+            "FilmName": "Охотники за привидениями: Наследники (2021)",
+            "AltFilmName": "",
+            "TrailerLink": "qoEUEWCtKZ4",
+            "ImageLarge": "https://www.ivi.ru/titr/uploads/2019/07/31/8de61d8abf52fc55c48dea1e9bcbcb05.jpg/1400x0",
+            "ImageSmall": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQONliP4eYzdvFuizqHMu1KQqGx3eYMVgiD9kMZHSjHbCVZppPMaYXlXynFFXP_s85Q9fA&usqp=CAU",
+            "rating": "10",
+            "during": "1 час 50 минут",
+            "address": "ул. Чубынина, 17",
+            "price": "200",
+            "nowDates": "04 ноября",
+
+            "StartDate": "2021-11-04T00:00:00",
+            "ExpireDate": "2021-09-10T23:59:00",
+            "sessions": [
+                {
+                    "DateTime": "2021-11-05T21:00:00",
+                    "PlaceHolder": "Place1",
+                    "SeatsId": "13"
+                },
+            ]
+
         }
     ]
 

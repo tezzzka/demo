@@ -2,7 +2,10 @@ import { useEffect, useState } from 'react';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { InitFilmsAction } from '../storage/actions';
-import './Welcome.css';
+import classnames from 'classnames';
+
+// import './Welcome.css';
+import styles from './Welcome.scss';
 
 import YouTube from 'react-youtube';
 
@@ -26,6 +29,7 @@ import ArrowRight from '../../public/assets/ArrowRight.png';
 import Cancel from '../../public/assets/cancel.png';
 
 export const _Welcome = (props) => {
+    const [showTrailer, setShowTrailer] = useState(false)
     const [largeImage, setLargeImage] = useState('');
     const [smallImage, setSmallImage] = useState('');
 
@@ -33,9 +37,9 @@ export const _Welcome = (props) => {
     const [current, setCurrent] = useState(0);
 
     const LImageHandler = () => {
-        console.log(current)
-        window.innerWidth < 480 ?
-            setLargeImage(smallImage || ImageSmall) : setLargeImage(largeImage || ImageLarge);
+        // console.log(current)
+        // window.innerWidth < 480 ?
+        //     setLargeImage(smallImage || ImageSmall) : setLargeImage(largeImage || ImageLarge);
     }
 
     var xDown = null;
@@ -72,16 +76,25 @@ export const _Welcome = (props) => {
 
     useEffect(() => {
         window.addEventListener('resize', LImageHandler);
+        return () => {
+            window.removeEventListener('resize', LImageHandler);
+        }
     }, [])
     useEffect(() => {
-        films != props.Films.films ? (setFilms(props.Films.films), Changer(0)) : '';
+        if (films != props.Films.films) {
+            setFilms(props.Films.films);
+            Changer(0);
+        }
+        // films != props.Films.films ? (setFilms(props.Films.films), Changer(0)) : '';
     })
     const Changer = (cur) => {
         setCurrent(props.Films.films[cur].index);
-        window.innerWidth < 480 ?
-            setLargeImage(props.Films.films[cur].ImageSmall || ImageSmall) :
-            setLargeImage(props.Films.films[cur].ImageLarge || ImageLarge);
+        setLargeImage(props.Films.films[cur].ImageLarge || ImageLarge);
         setSmallImage(props.Films.films[cur].ImageSmall || ImageSmall);
+        // window.innerWidth < 480 ?
+        //     setLargeImage(props.Films.films[cur].ImageSmall || ImageSmall) :
+        //     setLargeImage(props.Films.films[cur].ImageLarge || ImageLarge);
+        // setSmallImage(props.Films.films[cur].ImageSmall || ImageSmall);
     }
     const MovieHandler = (bool) => {
         if (bool && current == films.length - 1) {
@@ -92,100 +105,96 @@ export const _Welcome = (props) => {
             bool ? Changer(current + 1) : Changer(current - 1);
         }
     }
-    const TrailerBoxOpen = () => {
-        document.getElementById("TrailerModalId").className += " TrailerModalOpened";
-    }
-    const TrailerBoxClose = () => {
-        document.getElementById("TrailerModalId").className = "TrailerModal";
-    }
 
     return (
         <>
-            <div id="TrailerModalId" className="TrailerModal">
-                <img id="Cancel" src={Cancel} onClick={() => TrailerBoxClose()} />
-                <YouTube videoId={films[current] ? films[current].TrailerLink : ''} className="youtube" />
+            <div id="TrailerModalId" className={classnames(styles.TrailerModal, showTrailer ? styles.TrailerModalOpened : '')}>
+                <img id={styles.Cancel} src={Cancel} onClick={() => { setShowTrailer(false) }} />
+                <YouTube videoId={films[current] ? films[current].TrailerLink : ''} className={styles.youtube} />
             </div>
-            <div className="WrapperWelcome">
-                <div className="WrapperWelcomeTop" id="Splash" onTouchStart={(evt) => handleTouchStart(evt)} onTouchMove={(evt) => handleTouchMove(evt)}>
-                    <div className="WrapperWelcomeTopLeft">
-                        <img className="logomain" src={ImageLogo} />
-                        <span className="SocialMobile">
-                            <a href="#" className="socialLinks"><img src={ImageInstagram} /></a>
-                            <a href="#" className="socialLinks"><img src={ImageOK} /></a>
-                            <a href="#" className="socialLinks"><img src={ImageYoutube} /></a>
-                            <a href="#" className="socialLinks"><img src={ImageVK} /></a>
+            <div className={styles.Wrapper}>
+                <div className={styles.Top} id="Splash" onTouchStart={(evt) => handleTouchStart(evt)} onTouchMove={(evt) => handleTouchMove(evt)}>
+                    <div className={styles.TopLeft}>
+                        <img className={styles.logomain} src={ImageLogo} />
+                        <span className={styles.SocialMobile}>
+                            <a href="#" className={styles.socialLinks}><img src={ImageInstagram} /></a>
+                            <a href="#" className={styles.socialLinks}><img src={ImageOK} /></a>
+                            <a href="#" className={styles.socialLinks}><img src={ImageYoutube} /></a>
+                            <a href="#" className={styles.socialLinks}><img src={ImageVK} /></a>
                         </span>
-                        <span id="Trailer" className="textWelcome TrailerBox" onClick={() => TrailerBoxOpen()}>смотреть трейлер</span>
-                        <img className="FilmImage fiPrimary" src={largeImage} />
+                        <span id="Trailer" className={styles.TrailerBox} onClick={() => { setShowTrailer(true) }}>смотреть трейлер</span>
+                        <img className={styles.fiPrimary} src={largeImage} />
                     </div>
-                    <div className="WrapperWelcomeTopRight">
-                        <span className="SocialMain">
-                            <a href="#" className="socialLinks"><img src={ImageInstagram} /></a>
-                            <a href="#" className="socialLinks"><img src={ImageOK} /></a>
-                            <a href="#" className="socialLinks"><img src={ImageYoutube} /></a>
-                            <a href="#" className="socialLinks"><img src={ImageVK} /></a>
+                    <div className={styles.TopRight}>
+                        <span className={styles.SocialMain}>
+                            <a href="#" className={styles.socialLinks}><img className={styles.socialimg} src={ImageInstagram} /></a>
+                            <a href="#" className={styles.socialLinks}><img className={styles.socialimg} src={ImageOK} /></a>
+                            <a href="#" className={styles.socialLinks}><img className={styles.socialimg} src={ImageYoutube} /></a>
+                            <a href="#" className={styles.socialLinks}><img className={styles.socialimg} src={ImageVK} /></a>
                         </span>
-                        <img className="FilmImage fiSecondary" src={smallImage} />
+                        <img className={styles.fiSecondary} src={smallImage} />
                     </div>
                 </div>
-                <div className="WrapperWelcomeBottom">
-                    <div className="WrapperWelcomeBottomLeft">
-                        <div className="FilmTitle">{films[current] ? films[current].FilmName : ''} /</div>
-                        <div className="FilmTitle">{films[current] ? films[current].AltFilmName : ''}</div>
-                        <div className="FilmContainer">
-                            <div className="FilmCounter">
-                                <img className="ArrowSecondary" src={ArrowLeft} style={{ marginRight: '14px' }} />
-                                <span className="FilmCounterCurrent">{current + 1}</span>
-                                <span className="delim">/</span>
-                                <span className="FilmCounterTotal">{films.length}</span>
-                                <img className="ArrowSecondary" src={ArrowRight} style={{ marginLeft: '14px' }} />
+                <div className={styles.Bottom}>
+                    <div className={styles.BottomLeft}>
+                        <div className={styles.FilmTitle}>{films[current] ? films[current].FilmName : ''} /</div>
+                        <div className={styles.FilmTitle}>{films[current] ? films[current].AltFilmName : ''}</div>
+                        <div className={styles.FilmContainer}>
+                            <div className={styles.FilmCounter}>
+                                <img className={styles.ArrowSecondary} src={ArrowLeft} style={{ marginRight: '14px' }} />
+                                <span className={styles.FilmCounterCurrent}>{current + 1}</span>
+                                <span className={styles.delim}>/</span>
+                                <span className={styles.FilmCounterTotal}>{films.length}</span>
+                                <img className={styles.ArrowSecondary} src={ArrowRight} style={{ marginLeft: '14px' }} />
                             </div>
-                            <div className="FilmContainer">
-                                <div className="FilmContent ratingContent">
-                                    <span className="fcName">рейтинг</span>
-                                    <div className="FilmContentSecondary">
-                                        <img className="fcPic" src={Star} />
-                                        <span className="fcValue">{films[current] ? films[current].rating : ''}</span>
+                            <div className={styles.FilmContainer}>
+                                <div className={`${styles.FilmContent} ${styles.ratingContent}`}>
+                                    <span className={styles.fcName}>рейтинг</span>
+                                    <div className={styles.FilmContentSecondary}>
+                                        <img className={styles.fcPic} src={Star} />
+                                        <span className={styles.fcValue}>{films[current] ? films[current].rating : ''}</span>
                                     </div>
                                 </div>
-                                <div className="FilmContent ">
-                                    <span className="fcName">время сеанса</span>
-                                    <div className="FilmContentSecondary">
-                                        <img className="fcPic" src={Timer} />
-                                        <span className="fcValue">{films[current] ? films[current].during : ''}</span>
+                                <div className={styles.FilmContent}>
+                                    <span className={styles.fcName}>время сеанса</span>
+                                    <div className={styles.FilmContentSecondary}>
+                                        <img className={styles.fcPic} src={Timer} />
+                                        <span className={styles.fcValue}>{films[current] ? films[current].during : ''}</span>
                                     </div>
                                 </div>
-                                <div className="FilmContent ">
-                                    <span className="fcName">адрес</span>
-                                    <div className="FilmContentSecondary">
-                                        <img className="fcPic" src={MapPoint} />
-                                        <span className="fcValue">{films[current] ? films[current].address : ''}</span>
+                                <div className={`${styles.FilmContent} ${styles.address}`}>
+                                    <span className={styles.fcName}>адрес</span>
+                                    <div className={styles.FilmContentSecondary}>
+                                        <img className={styles.fcPic} src={MapPoint} />
+                                        <span className={styles.fcValue}>{films[current] ? films[current].address : ''}</span>
                                     </div>
                                 </div>
-                                <div className="FilmContent ">
-                                    <span className="fcName">цена</span>
-                                    <div className="FilmContentSecondary">
-                                        <img className="fcPic" src={Ruble} />
-                                        <span className="fcValue">{films[current] ? films[current].price : ''}</span>
+                                <div className={styles.FilmContent}>
+                                    <span className={styles.fcName}>цена</span>
+                                    <div className={styles.FilmContentSecondary}>
+                                        <img className={styles.fcPic} src={Ruble} />
+                                        <span className={styles.fcValue}>{films[current] ? films[current].price : ''}</span>
                                     </div>
                                 </div>
 
-                                <div className="FilmContent arrows">
-                                    <img onClick={() => MovieHandler(false)} className="ArrowPrimary" src={ArrowLeft} style={{ marginRight: '14px' }} />
-                                    <img onClick={() => MovieHandler(true)} className="ArrowPrimary" src={ArrowRight} />
-                                    <img className="BasketSecondary" src={Basket} />
+                                <div className={`${styles.FilmContent} ${styles.arrows}`}>
+                                    <img onClick={() => MovieHandler(false)} className={styles.ArrowPrimary} src={ArrowLeft} style={{ marginRight: '14px' }} />
+                                    <img onClick={() => MovieHandler(true)} className={styles.ArrowPrimary} src={ArrowRight} />
+                                    {/* <img className={styles.BasketSecondary} src={Basket} /> */}
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="WrapperWelcomeBottomRight">
-                        <img className="Basket" src={Basket} />
-                        <span className="textWelcome Buy">купить билет</span>
+                    <div className={styles.BottomRight}>
+                        <img className={styles.Basket} src={Basket} />
+                        <span className={`${styles.textWelcome} ${styles.Buy}`}>купить билет</span>
                     </div>
                 </div>
-                <div className="MobileBuy">
-                    <span className="textWelcome">купить билет</span>
+
+                <div className={styles.MobileBuy}>
+                    <img className={styles.BasketSecondary} src={Basket} />
                 </div>
+                <YouTube videoId={films[current] ? films[current].TrailerLink : ''} className={styles.youtubeMobile} />
             </div>
         </>
     )
