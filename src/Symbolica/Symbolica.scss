@@ -1,0 +1,13 @@
+.Container {overflow: hidden;height: 96px;}
+.Container > div {
+    float:left;
+    height: 100%;
+}
+.Wide { width: 192px;}
+.Narrow {width: 96px;}
+
+@media (max-width:1024px) {
+    .Container {height: 67px;}
+    .Wide {width: 134px}
+    .Narrow {width: 67px;}
+}
